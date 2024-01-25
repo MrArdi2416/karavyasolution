@@ -14,7 +14,6 @@ import Typography from "@mui/material/Typography";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import { LinearProgress } from "@mui/material";
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -157,7 +156,6 @@ export const Registration = () => {
   
       formik.setTouched(touched);
   
-      const validationErrors = await formik.validateForm();
       validateAndSetErrors(fieldsToValidate);
   
       if (fieldsToValidate.some((field) => !!formik.errors[field])) {
